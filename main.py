@@ -22,11 +22,20 @@ label.pack()
 # buttons
 
 def click():
-    print("u clicked the button")
+    print("the button is clicked")
 
+photo1 = PhotoImage(file='pic1.png').subsample(9, 9)
 button = Button(window,
                 text="convert",
-                command=click)
+                command=click,
+                font=("Comic Sans", 10),
+                fg="#34908B", bg="#FDF4AF",
+                activebackground="#6FBEB2",
+                activeforeground="#A5E9DD",
+                state=ACTIVE,
+                image=photo1,
+                compound='center')
+
 button.pack()
 
 
